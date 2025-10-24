@@ -1,0 +1,8 @@
+import javax.validation.constraints.*;
+
+{{#dto.fields}}
+    {{#description}}/** {{.}} */{{/description}}
+    {{#required}}@NotNull{{/required}}
+    {{#pattern}}@Pattern(regexp = "{{pattern}}"){{/pattern}}
+    private {{fieldType}} {{fieldName}};
+{{/dto.fields}}

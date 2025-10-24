@@ -1,0 +1,24 @@
+package {{packageName}};
+
+{{#methods}}
+{{#requestBody.isMultipath}}
+import org.springframework.web.multipart.MultipartFile;
+{{/requestBody.isMultipath}}
+{{/methods}}
+import java.util.*;
+
+public interface {{name}}Service {
+
+{{#methods}}
+    /**
+     * {{summary}}
+     * {{description}}
+     */
+    {{{returnType}}} {{methodName}}(
+        {{#params}}
+        {{type}} {{name}}{{^isLast}},{{/isLast}}
+        {{/params}}{{#requestBody}}{{#params}}, {{/params}}{{type}} {{name}}{{/requestBody}}
+    );
+{{/methods}}
+
+}
