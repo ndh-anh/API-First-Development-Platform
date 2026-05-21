@@ -13,7 +13,7 @@ catalog:
   eslint: ^9.39.4
   next: ^16.1.6
   orval: ^7.9.0
-  prettier: 3.5.3
+  prettier: 3.8.3
   react: ^19.2.4
   react-dom: ^19.2.4
   typescript: ^5
